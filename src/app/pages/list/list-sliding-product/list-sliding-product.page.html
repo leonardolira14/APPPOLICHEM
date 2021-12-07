@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Sliding Product</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-list-sliding-product [list]="list" (onFollow)="onFollow($event)"></custom-list-sliding-product>
+</ion-content>

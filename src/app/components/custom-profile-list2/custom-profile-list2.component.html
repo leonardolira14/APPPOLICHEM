@@ -1,0 +1,37 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-no-padding background-size ion-text-center no-border-radius"
+                      [ngStyle]="{'background-image':'url(assets/images/profile/20.jpg)'}">
+                <ion-avatar>
+                    <img [src]="user.img">
+                </ion-avatar>
+                <h3 class="text-size-xxl text-color-light">{{user.name}}</h3>
+                <ion-item lines="none" class="transparent ion-text-center">
+                    <ion-label>
+                        <h3 class="text-size-l text-color-medium">Follows</h3>
+                        <p class="text-color-tertiary">139</p>
+                    </ion-label>
+                    <ion-label>
+                        <h3 class="text-size-l text-color-medium">Following</h3>
+                        <p class="text-color-tertiary">299</p>
+                    </ion-label>
+                    <ion-label>
+                        <h3 class="text-size-l text-color-medium">Message</h3>
+                        <p class="text-color-tertiary">10</p>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="4" *ngFor="let item of list" class="ion-text-center">
+            <ion-card class="ion-no-margin bg">
+                <ion-label class="ion-text-center">
+                    <ion-icon [name]="item.icon" color="warning" size="large"></ion-icon>
+                    <h5 class="text-color-medium">{{item.name}}</h5>
+                </ion-label>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,25 @@
+app-list-drag {
+  ion-item {
+    --background: var(--my-card-background);
+    margin: 0px 10px 10px 10px;
+    border-radius: 8px;
+    --inner-padding-end: 0 !important;
+  }
+
+  h4, h3 {
+    font-size: 20px !important;
+    line-height: 110%;
+    color: var(--my-custom-font-color2);
+  }
+
+
+  p {
+    margin: 5px 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 20px !important;
+    font-size: 12px !important;
+    color: var(--my-custom-font-color) !important;
+  }
+
+
+}

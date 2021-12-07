@@ -1,0 +1,76 @@
+<custom-header></custom-header>
+<ion-content>
+    <custom-slides></custom-slides>
+    <ion-row class="content">
+        <ion-col size="6" *ngFor="let item of list" class="ion-text-center ion-padding">
+            <ion-icon [name]="item.icon" size="large" color="secondary"></ion-icon>
+            <h5>{{item.title}}</h5>
+            <p>{{item.content}}</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="screen">
+        <div class="screen-head">
+            <h4>Features</h4>
+            <div class="screen-head-line"></div>
+        </div>
+        <p class="ion-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit sit meta dolor meta.</p>
+        <ion-col size="6" *ngFor="let item of fList">
+            <h5>{{item.title}}</h5>
+            <p>{{item.content}}</p>
+            <ion-button color="secondary" size="small">Read More</ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="screen">
+        <ion-col size="12">
+            <div class="screen-head">
+                <h4>Our Team</h4>
+                <div class="screen-head-line"></div>
+            </div>
+        </ion-col>
+        <ion-col size="6" *ngFor="let item of tList">
+            <ion-card class="ion-no-padding ion-no-margin ion-text-center">
+                <img [src]="item.img">
+                <h5>{{item.name}}</h5>
+                <ion-button fill="clear" class="ion-no-padding" color="warning">
+                    <ion-icon name="logo-facebook" slot="icon-only" size="large"></ion-icon>
+                </ion-button>
+                <ion-button class="ion-no-padding" fill="clear" color="warning">
+                    <ion-icon name="logo-instagram" slot="icon-only" size="large"></ion-icon>
+                </ion-button>
+                <ion-button class="ion-no-padding" fill="clear" color="warning">
+                    <ion-icon name="logo-whatsapp" slot="icon-only" size="large"></ion-icon>
+                </ion-button>
+            </ion-card>
+
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="model">
+        <h4>{{model.title}}</h4>
+        <p>{{model.content}}</p>
+        <ion-button color="secondary" size="small">Read More</ion-button>
+    </ion-row>
+
+
+    <ion-row class="screen">
+        <ion-col size="12">
+            <div class="screen-head">
+                <h4>Latest News</h4>
+                <div class="screen-head-line"></div>
+            </div>
+        </ion-col>
+        <ion-col size="6" *ngFor="let item of newList">
+            <ion-card class="ion-no-padding ion-no-margin">
+                <img [src]="item.img">
+                <ion-card-content>
+                    <h5>{{item.title}}</h5>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </ion-card-content>
+            </ion-card>
+
+        </ion-col>
+    </ion-row>
+
+</ion-content>

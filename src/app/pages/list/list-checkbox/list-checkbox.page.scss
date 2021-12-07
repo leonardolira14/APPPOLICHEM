@@ -1,0 +1,47 @@
+app-list-checkbox {
+  ion-item {
+    --background: var(--my-card-background);
+    margin: 0px 10px 10px 10px;
+    border-radius: 8px;
+  }
+
+  ion-checkbox {
+    width: 26px;
+    height: 26px;
+  }
+
+  .item-child {
+    --background: var(--my-custom-item-child) !important;
+  }
+
+  h4 {
+    font-size: 20px !important;
+    line-height: 110%;
+    color: var(--my-custom-font-color2);
+  }
+
+  h5 {
+    font-size: 16px !important;
+    line-height: 110%;
+    color: var(--my-custom-font-color2);
+  }
+
+  .box {
+    transition: all 500ms;
+    max-height: 0;
+    display: block !important;
+    overflow: hidden;
+  }
+
+  .active {
+    transition: all 500ms;
+    overflow: visible;
+    max-height: 1000px;
+  }
+
+  ion-footer {
+    background: var(--ion-color-primary);
+  }
+
+
+}

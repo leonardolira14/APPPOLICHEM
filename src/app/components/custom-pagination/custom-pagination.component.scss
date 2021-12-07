@@ -1,0 +1,28 @@
+custom-pagination {
+  .pagination {
+    width: 100%;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .active {
+        border-color: var(--my-custom-active);
+      }
+
+      li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        border: 1px solid #777;
+        margin: 4px;
+        line-height: 28px;
+        color: var(--my-custom-font-color2);
+        font-size: 12px;
+      }
+    }
+  }
+}

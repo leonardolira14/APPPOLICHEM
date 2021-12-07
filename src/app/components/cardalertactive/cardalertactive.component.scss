@@ -1,0 +1,19 @@
+.muestra-color{
+    position: relative;
+    width:  36px;
+    height: 36px;
+    border-radius: 50%;
+    &.ac{
+        background-color: #9587E3;
+    }
+    &.amsrp{
+        background-color: #D7258F;
+    }
+    &.amr{
+        background-color: #EEFBAA;
+    }   
+}
+
+.fa{
+    font-size: 20px;
+  }

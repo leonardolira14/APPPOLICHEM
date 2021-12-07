@@ -1,0 +1,32 @@
+<ion-slides [pager]="isPager" [options]="slideOpts" [class.full]="isFull">
+    <ion-slide *ngFor="let item of list">
+        <ion-card>
+            <ion-item lines="none">
+                <ion-avatar>
+                    <img [src]="item?.avatar">
+                </ion-avatar>
+                <ion-label class="ion-margin-start">
+                    <h3 class="text-size-l text-color-light">{{item?.name}}</h3>
+                    <p class="text-size-s text-color-secondary">{{item?.date}}</p>
+                </ion-label>
+                <ion-button fill="clear" color="light" slot="end">
+                    <ion-icon slot="icon-only" name="ios-more"></ion-icon>
+                </ion-button>
+            </ion-item>
+            <div class="background-size" [ngStyle]="{'background-image':'url('+item?.bgImg+')'}"></div>
+            <ion-card-content>
+                <h3 class="text-size-l text-color-light">{{item?.title}}</h3>
+                <h4 class="text-size-m background-color-primary">{{item?.subTitle}}</h4>
+                <p class="text-size-m background-color-secondary ion-text-wrap">{{item?.content}}</p>
+                <ion-button fill="clear">
+                    <ion-icon slot="start" name="thumbs-up"></ion-icon>
+                    79 Likes
+                </ion-button>
+                <ion-button fill="clear">
+                    <ion-icon slot="start" name="ios-chatbubbles"></ion-icon>
+                    37 Comments
+                </ion-button>
+            </ion-card-content>
+        </ion-card>
+    </ion-slide>
+</ion-slides>

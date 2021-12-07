@@ -1,0 +1,29 @@
+custom-card-layout2 {
+  ion-card {
+    height: 170px;
+    margin: 0 !important;
+    display: flex !important;
+    box-shadow: none !important;
+    flex-direction: row;
+    width: 100%;
+    background: var(--my-card-background) !important;
+  }
+
+  ion-card ion-item {
+    width: 50% !important;
+    --inner-padding-end: 0;
+    --background-hover: transparent;
+    --background-activated: transparent;
+    --background: transparent;
+    --background-focused: transparent;
+    --ripple-color: transparent;
+    margin: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  ion-col:nth-child(2n) ion-card {
+    margin: 0 !important;
+    flex-direction: row-reverse;
+    background: var(--my-custom-active) !important;
+  }
+}

@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Skeleton List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-skeleton [rows]="8" *ngIf="!list"></custom-skeleton>
+    <ion-list *ngIf="list">
+        <ion-item *ngFor="let item of list" lines="none">
+            <ion-avatar slot="start">
+                <img [src]="item.img">
+            </ion-avatar>
+            <ion-label class="ion-padding-start">
+                <h4 class="text-color-medium text-size-xl">{{item.title}}</h4>
+                <p>{{item.color}}</p>
+                <ion-button color="secondary">${{item.price}}</ion-button>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

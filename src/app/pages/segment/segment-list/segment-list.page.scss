@@ -1,0 +1,9 @@
+:host {
+  ion-segment-button {
+    padding: 5px;
+  }
+
+  ::ng-deep custom-list-drag-product ion-grid {
+    padding-top: 10px !important;
+  }
+}

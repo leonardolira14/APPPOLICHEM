@@ -1,0 +1,12 @@
+:host{
+  ion-list {
+    padding: 0px !important;
+    background: var(--my-custom-item-child) !important;
+
+    ion-list-header {
+      background: var(--my-custom-item-child) !important;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+  }
+}

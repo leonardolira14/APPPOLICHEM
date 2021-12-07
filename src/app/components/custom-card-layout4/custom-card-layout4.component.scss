@@ -1,0 +1,15 @@
+custom-card-layout4{
+  ion-card {
+    background: var(--my-card-background) !important;
+    margin-bottom: 10px !important;
+
+    ion-item {
+      border-radius: 0px !important;
+      --background: transparent !important;
+
+      p {
+        margin-top: 5px !important;
+      }
+    }
+  }
+}

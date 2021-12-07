@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/gallery/gallery-list"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Gallery</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-slides-animation [list]="list" [animation]="'cube'" [isFull]="true"></custom-slides-animation>
+</ion-content>

@@ -1,0 +1,15 @@
+<custom-header [title]="'Home Shop'"></custom-header>
+<ion-content>
+    <custom-slides></custom-slides>
+    <ion-row class="shop ion-text-center">
+        <ion-col size="6" *ngFor="let item of pList">
+            <ion-card>
+                <img [src]="item.img">
+                <h6>{{item.name}}</h6>
+                <p class="price">${{item.price}}</p>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <custom-pagination [pageData]="pageList" (onPage)="onPage($event)"></custom-pagination>
+</ion-content>

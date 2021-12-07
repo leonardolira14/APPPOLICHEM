@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Product CTA Header</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-list-drag-product [list]="list" (doReorder)="doReorder($event)"></custom-list-drag-product>
+</ion-content>

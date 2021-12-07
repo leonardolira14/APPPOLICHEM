@@ -1,0 +1,44 @@
+app-list-image {
+  ion-item {
+    --background: var(--my-card-background);
+    margin: 0px 10px 10px 10px;
+  }
+
+  ion-avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  h4 {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 110%;
+    color: var(--my-custom-font-color2);
+  }
+
+  p {
+    margin: 5px 0 !important;
+    letter-spacing: 1px !important;
+    line-height: 20px !important;
+    font-size: 12px !important;
+    color: var(--my-custom-font-color) !important;
+  }
+
+  .box {
+    transition: all 500ms;
+    max-height: 0;
+    display: block !important;
+    overflow: hidden;
+  }
+
+  .active {
+    transition: all 500ms;
+    overflow: visible;
+    max-height: 1000px;
+  }
+
+  .child {
+    --background: var(--my-custom-item-background) !important;
+    --inner-padding-end: 8px !important;
+  }
+}

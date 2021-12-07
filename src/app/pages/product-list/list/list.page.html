@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Product List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-product-list [list]="list" [isList]="isList"></custom-product-list>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button color="secondary" (click)="toggle()">
+            <ng-template [ngIf]="isList" [ngIfElse]="detail">
+                <ion-icon name="ios-list"></ion-icon>
+            </ng-template>
+            <ng-template #detail>
+                <ion-icon name="keypad"></ion-icon>
+            </ng-template>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

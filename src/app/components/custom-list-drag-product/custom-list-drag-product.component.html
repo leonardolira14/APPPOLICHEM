@@ -1,0 +1,30 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-list>
+                <ion-list-header style="display: block">
+                    <ion-item lines="none" class="transparent">
+                        <ion-label class="ion-text-center">
+                            <h3 class="text-size-xl text-color-light">Make Order Now!</h3>
+                            <p class="text-size-s text-color-tertiary">The list of purchase orders.</p>
+                        </ion-label>
+                    </ion-item>
+                    <ion-button class="default-button" expand="block" color="secondary">CONFIRM</ion-button>
+                </ion-list-header>
+                <ion-reorder-group (ionItemReorder)="onReorder($event)" disabled="false">
+                    <ion-item *ngFor="let item of list" lines="none">
+                        <ion-avatar slot="start">
+                            <img [src]="item.img">
+                        </ion-avatar>
+                        <ion-label>
+                            <h4 class="text-size-l text-color-light">{{item.title}}</h4>
+                            <p class="text-size-s text-color-tertiary">{{item.color}}</p>
+                            <ion-button>${{item.price}}</ion-button>
+                        </ion-label>
+                        <ion-reorder slot="end"></ion-reorder>
+                    </ion-item>
+                </ion-reorder-group>
+            </ion-list>
+        </ion-col>
+    </ion-row>
+</ion-grid>

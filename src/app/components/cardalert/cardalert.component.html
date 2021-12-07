@@ -1,0 +1,43 @@
+<div class="card w-100 bg-blackk" >
+  <div class="card-body">
+    <h5 class="card-title amsrp" *ngIf="tipoAlerta==='amsrp'">ALERTA DE MARGEN MSRP</h5>
+    <h5 class="card-title amr" *ngIf="tipoAlerta==='amr'">ALERTA DE MARGEN REAL</h5>
+    <h5 class="card-title ac" *ngIf="tipoAlerta==='ac'">ALERTA DE COMPETENCIA</h5>
+    <h5 class="card-title ac" *ngIf="tipoAlerta==='an'">ALERTA DE NUEVO</h5>
+    <div class="row d-flex align-content-center flex-wrap">
+      <div class="col-3 d-flex align-content-center flex-wrap">
+        <img class="avatar" src="assets/images/polychem/productos/sal-ros-molido-fino.jpg">
+      </div>
+      <div class="col-8">
+          <span class="d-block text-bold title text-justify mb-3">{{title}}</span>
+            <div class="row">
+              <div class="col-7">
+                <span class="d-block text-bold title text-justify" >{{precio}} MXN</span>
+              </div>
+              <div class="col-5">
+                <span class="d-block text-bold title text-justify" >{{margen}}%</span>
+              </div>
+            </div>
+         
+         
+      </div>
+      <div class="col-12 mt-2">
+        Precio: <span class="text-bold">{{tipoprecio}}</span>
+      </div>
+      <div class="col-12 mt-2" *ngIf="tipoAlerta==='ac'">
+        Marca: <span class="text-bold">{{marca}}</span>
+      </div>
+      <div class="col-12 mt-2" *ngIf="tipoAlerta==='ac' || tipoAlerta==='amr'">
+        {{restaurante}}
+      </div>
+      </div>
+      <div class="row d-flex justify-content-end mt-3">
+      <div class="col-2">
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </div>
+      <div class="col-4">
+        <small> {{fecha}}</small> 
+      </div>
+    </div>
+  </div>
+</div>

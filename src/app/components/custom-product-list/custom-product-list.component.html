@@ -1,0 +1,39 @@
+<ion-grid>
+    <ion-row>
+        <ng-template [ngIf]="isList" [ngIfElse]="detail">
+            <ion-col size="6" *ngFor="let item of list">
+                <ion-card class="ion-no-margin ion-no-padding">
+                    <img [src]="item.img">
+                    <ion-item lines="none" class="ion-text-center ion-no-margin ion-no-padding">
+                        <ion-label>
+                            <h3 class="text-size-xl text-color-light">{{item.title}}</h3>
+                            <ion-badge class="ion-float-left" color="secondary">$99.9</ion-badge>
+                            <ion-button fill="clear" class="ion-float-right ion-no-padding">
+                                <ion-icon name="cart" size="large" color="warning"></ion-icon>
+                            </ion-button>
+                        </ion-label>
+                    </ion-item>
+                </ion-card>
+            </ion-col>
+        </ng-template>
+        <ng-template #detail>
+            <ion-col size="12" *ngFor="let item of list">
+                <ion-item lines="none">
+                    <ion-thumbnail>
+                        <img [src]="item.img">
+                    </ion-thumbnail>
+                    <ion-label>
+                        <h3 class="text-size-xl text-color-light">{{item.title}}</h3>
+                        <p class="text-size-s text-color-tertiary">{{item.subTitle}}</p>
+                        <ion-badge class="ion-float-left">$99.9</ion-badge>
+                        <ion-button fill="clear" class="ion-float-right ion-no-padding">
+                            <ion-icon name="cart" size="large" color="warning"></ion-icon>
+                        </ion-button>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ng-template>
+
+
+    </ion-row>
+</ion-grid>

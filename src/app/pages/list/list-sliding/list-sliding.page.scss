@@ -1,0 +1,43 @@
+app-list-sliding {
+  ion-item {
+    --background: var(--my-custom-item-background);
+    margin: 0px 10px 10px 10px;
+    border-radius: 8px;
+    --inner-padding-end: 0 !important;
+  }
+
+  h3 {
+    font-size: 1.1rem !important;
+    color: var(--my-custom-font-color);
+  }
+
+  h5 {
+    color: var(--my-custom-font-color3);
+  }
+
+
+  p {
+    margin: 5px 0 !important;
+    letter-spacing: 1px !important;
+    font-size: 12px !important;
+    color: var(--my-custom-font-color) !important;
+  }
+
+  .s-box {
+    background: var(--my-custom-active);
+    padding: 0 10px;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    margin: 0px !important;
+    --inner-padding-end: 0;
+  }
+
+  ion-icon {
+    font-size: 23px;
+  }
+
+  .item-options-end {
+    border-bottom-width: 0px !important;
+  }
+}

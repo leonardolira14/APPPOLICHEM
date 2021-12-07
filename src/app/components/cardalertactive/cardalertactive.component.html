@@ -1,0 +1,48 @@
+<div class="card w-100 bg-blackk" >
+  <div class="card-body container text-blanco">
+      <div class="row">
+        <div class="col-3">
+            <div [ngClass]="{'amsrp':tipoAlerta==='amsrp','amr':tipoAlerta==='amr','ac':tipoAlerta==='ac'}"  class="muestra-color"></div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-12 text-blanco text-bold mb-2" *ngIf="tipoAlerta==='amsrp'">
+              ALERTA DE MARGEN MSRP
+            </div>
+            <div class="col-12 text-blanco text-bold mb-2" *ngIf="tipoAlerta==='amr'">
+              ALERTA DE MARGEN REAL
+            </div>
+            <div class="col-12 text-blanco text-bold mb-2" *ngIf="tipoAlerta==='ac'">
+              ALERTA DE COMPETENCIA
+            </div>
+           
+            <div class="col-12 mb-2">
+              Precio: <span class="text-bold text-uppercase">{{precio}}</span>
+            </div>
+            <div class="col-12 mb-2">
+              Tipo: <span class="text-bold">{{tipo}}</span>
+            </div>
+            <div class="col-12 mb-2">
+              Fabricación: <span class="text-bold">{{fabricacion}}</span>
+            </div>
+            <div class="col-12 mb-2">
+              Márgen: <span class="text-bold">{{marge}}%</span>
+            </div>
+            <div class="col-12 d-flex justify-content-end mb-2">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+           
+          </div>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7">
+          <small class="text-regular">{{editor}}</small>
+        </div>
+        <div class="col-5">
+          <small class="text-regular">{{fecha}}</small>
+        </div>
+      </div>
+  </div>
+</div>

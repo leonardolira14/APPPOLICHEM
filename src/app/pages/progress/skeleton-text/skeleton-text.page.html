@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Text and Image</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-padding custom-skeleton" *ngIf="!text">
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        <ion-skeleton-text animated></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    </div>
+    <ion-item lines="none" *ngIf="text">
+        <ion-label>
+            <p class="ion-text-wrap text-color-light">{{text}}</p>
+        </ion-label>
+    </ion-item>
+
+
+    <ion-row class="ion-text-center">
+        <custom-skeleton-img [src]="img"></custom-skeleton-img>
+    </ion-row>
+
+</ion-content>

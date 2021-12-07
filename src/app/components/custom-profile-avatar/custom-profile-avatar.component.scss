@@ -1,0 +1,11 @@
+:host {
+  ion-card {
+    background: var(--my-custom-item-background);
+
+    ion-avatar {
+      height: 120px !important;
+      width: 120px !important;
+      margin: 10px auto;
+    }
+  }
+}

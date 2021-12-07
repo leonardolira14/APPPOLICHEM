@@ -1,0 +1,11 @@
+<ion-list lines="none">
+  <ion-item lines="none">
+    <ion-label><h4 class="text-size-xl">Multiple Selection</h4></ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Toppings</ion-label>
+    <ion-select multiple="true" cancelText="Nah" okText="Okay!" [(ngModel)]="selected" (ionChange)="onSelect()">
+      <ion-select-option *ngFor="let item of list" [value]="item">{{item}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-list>

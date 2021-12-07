@@ -1,0 +1,15 @@
+<custom-header [title]="'Home Blog'"></custom-header>
+<ion-content>
+    <custom-slides></custom-slides>
+    <ion-row class="blog">
+        <ion-col size="12" *ngFor="let item of blogList">
+            <img [src]="item.img">
+            <h5>{{item.title}}</h5>
+            <ion-icon name="calendar" color="medium" class="date"></ion-icon>
+            <span>{{item.date}}</span>
+            <p>{{item.content}}</p>
+            <ion-button color="secondary" size="small">Read More</ion-button>
+        </ion-col>
+    </ion-row>
+    <custom-pagination [pageData]="blogList" (onPage)="onPage($event)"></custom-pagination>
+</ion-content>

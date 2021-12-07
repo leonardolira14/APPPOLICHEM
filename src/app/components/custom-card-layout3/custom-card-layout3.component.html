@@ -1,0 +1,34 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-md="6" *ngFor="let item of list">
+      <ion-card class="ion-no-padding ion-no-margin card">
+        <div [ngStyle]="{'background-image': 'url('+item.img+')'}" class="background-size header">
+                        <span class="price">Price
+                        <div>${{item.price}}</div>
+                        </span>
+        </div>
+        <ion-chip class="ion-float-right transparent">
+          <ion-label color="light">See All</ion-label>
+          <ion-icon name="arrow-forward" color="light"></ion-icon>
+        </ion-chip>
+        <div class="slider">
+          <ion-card *ngFor="let img of item.child" class="background-size"
+                    [ngStyle]="{'background-image': 'url('+img+')'}"></ion-card>
+        </div>
+        <ion-card-content class="ion-no-margin ion-no-padding">
+          <ion-item lines="none" class="transparent">
+            <ion-icon name="ios-pin" size="large" class="icon-round"></ion-icon>
+            <ion-label>
+              <h3 class="text-size-xl text-color-medium ion-text-wrap ion-padding-start">{{item.title}}</h3>
+            </ion-label>
+            <ion-button fill="clear">
+              <ion-icon slot="icon-only" name="ios-more" color="secondary"></ion-icon>
+            </ion-button>
+          </ion-item>
+          <p class="text-size-s text-color-tertiary ion-padding-top ion-padding-start ion-text-wrap">{{item.content}}</p>
+          <ion-button expand="block" color="secondary">Buy Now!</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

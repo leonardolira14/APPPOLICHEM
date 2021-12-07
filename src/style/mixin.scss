@@ -1,0 +1,77 @@
+$blue: #3190e8;  
+$bc: #e4e4e4;
+$fc:#fff;
+
+//  background img  size
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+// fullscreen
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+// center
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// center
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+// center
+@mixin cl {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+// width
+@mixin width($width, $height){
+	width: $width;
+	height: $height;
+}
+
+//  font
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
+	font: #{$size}/#{$line-height} $family;
+}
+
+// font color
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+// flex
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+
+}
+
+// inline-flex
+@mixin ifj($type: space-between){
+	display: inline-flex;
+	justify-content: $type;
+
+}

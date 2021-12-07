@@ -1,0 +1,25 @@
+<custom-header [title]="'Home Portfolio'"></custom-header>
+<ion-content>
+    <custom-slides></custom-slides>
+    <ion-row class="portfolio">
+        <ion-col size="12">
+            <div class="portfolio-head">
+                <h4>Portfolio</h4>
+                <div class="portfolio-head-line"></div>
+            </div>
+        </ion-col>
+
+        <div class="tabs">
+            <ul>
+                <li *ngFor="let item of mList" (click)="onSelect(item)"
+                    [class.active]="selectedItem===item">
+                    <h5>{{item}}</h5>
+                </li>
+            </ul>
+        </div>
+        <ion-col size="6" *ngFor="let item of list;let i=index">
+            <img [src]="item.img">
+        </ion-col>
+    </ion-row>
+
+</ion-content>

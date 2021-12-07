@@ -1,0 +1,51 @@
+<ion-grid class="ion-margin-top">
+    <ion-row>
+        <ion-col size="12">
+            <ion-card class="ion-padding overflow">
+                <ion-avatar>
+                    <img [src]="user.img">
+                </ion-avatar>
+                <ion-card-content class="ion-text-center">
+                    <h3 class="text-size-xl text-color-light">{{user.name}}</h3>
+                    <p class="text-size-s text-color-light">{{user.intro}}</p>
+                </ion-card-content>
+                <ion-item lines="none" class="ion-no-padding ion-text-center ion-no-margin">
+                    <ion-label>
+                        <span class="text-color-light">999</span>
+                        <p class="text-color-light">Followers</p>
+                    </ion-label>
+                    <ion-label>
+                        <span class="text-color-light">129</span>
+                        <p class="text-color-light">Following</p>
+                    </ion-label>
+                    <ion-label>
+                        <span class="text-color-light">88</span>
+                        <p class="text-color-light">Sales</p>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+        <ion-col class="ion-text-center" size="12">
+            <h3 class="text-size-l text-color-light ion-no-margin ion-text-uppercase">populary</h3>
+            <ion-slides [pager]="true">
+                <ion-slide *ngFor="let item of list">
+                    <ion-card>
+                        <img [src]="item.img">
+                        <ion-card-content>
+                            <h3 class="text-size-l text-color-light">{{item.title}}</h3>
+                            <p class="text-size-s text-color-secondary">{{item.content}}</p>
+                        </ion-card-content>
+                        <ion-button fill="clear" color="light">
+                            <ion-icon slot="icon-only" name="thumbs-up" color="warning"></ion-icon>
+                            99 Likes
+                        </ion-button>
+                        <ion-button fill="clear" color="light">
+                            <ion-icon slot="icon-only" name="ios-chatbubbles" color="warning"></ion-icon>
+                            9 Comments
+                        </ion-button>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </ion-col>
+    </ion-row>
+</ion-grid>

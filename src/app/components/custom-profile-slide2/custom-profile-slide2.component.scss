@@ -1,0 +1,23 @@
+:host {
+  ion-avatar {
+    margin: -40px auto 0;
+    overflow: visible;
+    border: 4px solid var(--my-custom-avatar-border) !important;
+  }
+
+  ion-item {
+    --background: transparent !important;
+    border-radius: 0px !important;
+  }
+
+  ion-card {
+    background: var(--my-custom-item-background);
+  }
+  .overflow{
+    overflow: visible;
+  }
+
+  ::ng-deep.swiper-pagination-bullet {
+    background: var(--ion-color-dark-contrast) !important;
+  }
+}

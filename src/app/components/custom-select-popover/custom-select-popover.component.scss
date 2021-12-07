@@ -1,0 +1,13 @@
+:host {
+  ion-list {
+    background: var(--my-toolbar-color) !important;
+    border-radius: 8px !important;
+    margin: 0px 10px 10px 10px !important;
+  }
+
+  ion-item {
+    --background: transparent !important;
+    margin: 0px !important;
+    border-radius: 0px !important;
+  }
+}

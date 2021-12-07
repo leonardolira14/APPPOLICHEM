@@ -1,0 +1,69 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-padding ion-no-margin background-size no-border-radius"
+                      [ngStyle]="{'background-image':'url('+img+')'}">
+                <ion-item lines="none" class="ion-margin-top">
+                    <ion-avatar>
+                        <img [src]="user.img">
+                    </ion-avatar>
+                </ion-item>
+                <ion-item lines="none" class="ion-text-center">
+                    <ion-label>
+                        <h3 class="text-size-xl text-color-light">{{user.name}}</h3>
+                        <p class="text-size-s text-color-light">{{user.intro}}</p>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row class="col-background">
+        <ion-col class="ion-no-padding" size="12">
+            <ion-item lines="none" class="ion-no-padding ion-text-center ion-no-margin">
+                <ion-label>
+                    <span class="text-color-light">999</span>
+                    <p class="text-color-light">Followers</p>
+                </ion-label>
+                <ion-label>
+                    <span class="text-color-light">129</span>
+                    <p class="text-color-light">Following</p>
+                </ion-label>
+                <ion-label>
+                    <span class="text-color-light">88</span>
+                    <p class="text-color-light">Sales</p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="6" class="col-background">
+            <ion-button color="warning" class="default-button" expand="block"> Follows</ion-button>
+        </ion-col>
+        <ion-col size="6">
+            <ion-button color="warning" class="default-button" expand="block"> Sales</ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="ion-text-center">
+            <h3 class="text-size-l text-color-light ion-text-uppercase">populary</h3>
+        </ion-col>
+        <ion-col size="12">
+            <ion-slides [pager]="true">
+                <ion-slide *ngFor="let item of list">
+                    <ion-card class="card">
+                        <ion-card-content>
+                            <h3 class="text-size-l text-color-light">{{item.title}}</h3>
+                            <p class="text-size-s text-color-secondary">{{item.content}}</p>
+                        </ion-card-content>
+                        <ion-button fill="clear" color="light">
+                            <ion-icon slot="icon-only" name="thumbs-up" color="warning"></ion-icon>
+                            99 Likes
+                        </ion-button>
+                        <ion-button fill="clear" color="light">
+                            <ion-icon slot="icon-only" name="ios-chatbubbles" color="warning"></ion-icon>
+                            9 Comments
+                        </ion-button>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </ion-col>
+    </ion-row>
+</ion-grid>

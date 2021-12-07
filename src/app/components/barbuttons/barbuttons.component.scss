@@ -1,0 +1,13 @@
+@import '../../../global.scss';
+
+ion-fab-list{
+    background: map-get($colorsN, negro1N );
+    padding: 6px;
+}
+ion-label{
+    color:white;
+}
+
+.fa{
+    font-size: 2rem;
+}

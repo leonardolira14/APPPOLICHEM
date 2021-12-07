@@ -1,0 +1,21 @@
+:host {
+  .corner {
+    width: 120px;
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    white-space: nowrap;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-45deg);
+    font-size: 15px;
+    border-radius: 0px;
+  }
+
+  ion-card {
+    background: var(--my-card-background) !important;
+  }
+
+  ion-item {
+    --background: transparent !important;
+  }
+}

@@ -1,0 +1,259 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #363636;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #292929;
+  --ion-color-primary-tint: #363636;
+
+  /** secondary **/
+  --ion-color-secondary: #f44336;
+  --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #FCA182;
+  --ion-color-secondary-tint: #f44336;
+
+  /** tertiary **/
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #633ce0;
+  --ion-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0ec254;
+  --ion-color-success-tint: #28e070;
+
+  /** warning **/
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
+
+  /** dark **/
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --ion-color-medium: #989aa2;
+  --ion-color-medium-rgb: 152, 154, 162;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #86888f;
+  --ion-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 244, 244;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d7d8da;
+  --ion-color-light-tint: #f5f6f9;
+}
+
+
+:root {
+
+  --ion-default-font: 'Arimo', sans-serif !important;
+
+
+  //custom color
+  --h1-font-size: 24px;
+  --h2-font-size: 20px;
+  --h3-font-size: 17px;
+  --h4-font-size: 16px;
+  --h5-font-size: 15px;
+  --h6-font-size: 12px;
+  --text-font-size: 14px;
+
+  --my-toolbar-color: #ddd;
+  --my-custom-font-color: #bbb;
+  --my-custom-font-color2: #ccc;
+  --my-custom-font-color3: #fff;
+  --my-custom-price: #f44336;
+  --my-custom-active: #f44336;
+  --my-custom-sidemu-background: #222;
+  --my-custom-boder: #333;
+  --my-custom-text-boder: #444;
+  --my-custom-item-child: #979090;
+  --my-custom-backgroud: #232323;
+  --my-custom-backgroud2: #676565;
+  --my-card-background: #948d8d4d;
+  --my-custom-item-background: #656464;
+  --my-custom-item-background2: #494545;
+  --my-custom-toast-background: #f2f2f2;
+  --my-custom-avatar-border: #b8f265;
+
+
+  --custom-gradient-images-primary: #d5d2d200;
+  --custom-gradient-images-secondary: var(--my-custom-active);
+  --custom-gradient-image: linear-gradient(to bottom, var(--custom-gradient-images-primary) 0%, var(--custom-gradient-images-secondary) 100%);
+
+  ion-content {
+    --background: var(--my-custom-backgroud);
+  }
+
+  .transparent {
+    --background: transparent;
+    background: transparent;
+  }
+
+  .icon-round {
+    padding: 10px;
+    background: var(--ion-color-warning);
+    border-radius: 50%;
+  }
+
+  .clear {
+    display: block;
+    clear: both;
+  }
+
+  .background-size {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .box-shadow {
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.13);
+    position: relative;
+    z-index: 999;
+  }
+
+  .background-color-primary {
+    color: var(--my-card-background);
+  }
+
+  .background-color-secondary {
+    color: var(--my-custom-item-background);
+  }
+
+  // text color
+  .text-color-primary {
+    color: var(--ion-color-primary);
+  }
+
+  .text-color-secondary {
+    color: var(--my-custom-font-color);
+  }
+
+  .text-color-tertiary {
+    color: var(--my-custom-font-color2);
+  }
+
+  .text-color-medium {
+    color: var(--my-custom-font-color3);
+  }
+
+  .text-color-light {
+    color: var(--my-custom-font-color3);
+  }
+
+
+  //text size
+  .text-size-xxl {
+    font-size: var(--h1-font-size);
+    line-height: 29px;
+    letter-spacing: 1px;
+  }
+
+  .text-size-xl {
+    font-size: var(--h2-font-size);
+    letter-spacing: 1px;
+  }
+
+  .text-size-l {
+    font-size: var(--h3-font-size);
+    letter-spacing: 1px;
+  }
+
+  .text-size-m {
+    font-size: var(--h4-font-size);
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+
+  .text-size-s {
+    font-size: var(--h6-font-size);
+    letter-spacing: 1px;
+  }
+
+  .default-button {
+    --padding-top: 12px;
+    --padding-bottom: 12px;
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border-radius: 24px;
+    --border-radius: 24px;
+    --box-shadow: none;
+    font-size: var(--h5-font-size);
+    height: auto;
+  }
+
+  .no-border-radius {
+    border-radius: 0;
+    --border-radius: 0;
+  }
+
+}
+
+.md, .ios {
+  ion-toast {
+    --background: var(--my-custom-toast-background);
+    color: var(--ion-color-primary);
+  }
+
+  /* Use the primary color as the background for the toolbar */
+  --ion-toolbar-background: var(--ion-color-primary);
+
+  /* Change the color of the toolbar components */
+  --ion-toolbar-color: var(--my-toolbar-color);
+
+  /* Change the color of the activated toolbar components */
+  --ion-toolbar-color-activated: #fff;
+
+  /* Change the color of the unchecked segment buttons */
+  --ion-toolbar-color-unchecked: rgba(255, 255, 255, .6);
+
+  /* Change the color of the checked segment button */
+  --ion-toolbar-color-checked: #fff;
+}
+
+.md {
+  ion-searchbar {
+    padding: 0px;
+  }
+}
+
+.ios {
+  ion-searchbar {
+    max-height: 44px !important;
+    padding: 0px;
+  }
+}

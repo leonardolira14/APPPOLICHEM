@@ -1,0 +1,10 @@
+:host {
+  ion-card {
+    background: var(--my-custom-item-background);
+  }
+
+  ion-item {
+    --background: transparent !important;
+    border-radius: 0px !important;
+  }
+}

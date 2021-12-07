@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>detail</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row class="detail ion-padding-start ion-padding-end">
+        <img [src]="detail.img">
+        <h5>{{detail.title}}</h5>
+        <span class="price">${{detail.price}}</span>
+        <p>{{detail.content}}</p>
+        <ion-button color="secondary" size="small">Add to Bag</ion-button>
+    </ion-row>
+
+    <ion-row class="review">
+        <h5>1 reviews</h5>
+        <ion-col size="3">
+            <ion-avatar>
+                <img src="assets/images/avatar/user1.jpg">
+            </ion-avatar>
+        </ion-col>
+        <ion-col size="9">
+            <div class="review-title">
+                <span><strong>{{review.author}}</strong> | {{review.date}} | Reply</span>
+            </div>
+            <p>{{review.content}}</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <h5>Post Review in Below</h5>
+        <p>Lorem ipsum dolor sit amet consectetur*</p>
+        <ion-col size="12">
+            <form [formGroup]="rForm" style="width: 100%" class="ion-margin">
+                <ion-input formControlName="name" type="text" placeholder="NAME"
+                           [class.active]="!(!rForm.controls.name.valid && rForm.controls.name.dirty)"
+                           [class.error]="!rForm.controls.name.valid  && rForm.controls.name.dirty"></ion-input>
+                <ion-input formControlName="email" type="text" placeholder="EMAIL"></ion-input>
+                <ion-input formControlName="subject" type="text" placeholder="SUBJECT"></ion-input>
+                <ion-textarea class="textarea" [rows]="6" formControlName="review" type="text"
+                              placeholder="YOUR REVIEW"></ion-textarea>
+            </form>
+            <ion-button color="secondary" expand="block">Post Review</ion-button>
+        </ion-col>
+
+    </ion-row>
+</ion-content>

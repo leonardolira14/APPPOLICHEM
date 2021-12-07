@@ -1,0 +1,29 @@
+:host {
+  div {
+    background: var(--ion-color-primary-contrast);
+
+    .custom-skeleton {
+      ion-skeleton-text {
+        line-height: 13px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  ion-row {
+    background: var(--ion-color-primary-contrast);
+  }
+
+  ion-thumbnail {
+    width: 375px;
+    height: 281px;
+  }
+
+  custom-skeleton-img {
+    min-height: 280px;
+  }
+
+}

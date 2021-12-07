@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>List Checkbox</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h4 class="ion-margin-start">Mobile Phone </h4>
+    <ng-template ngFor let-item [ngForOf]="list">
+        <ion-item lines="none" (click)="toggle(item)" tappable>
+            <ion-label class="ion-margin-start">
+                <h4>{{item.title}}</h4>
+            </ion-label>
+        </ion-item>
+
+        <div class="box" [class.active]="item.active">
+            <ng-template ngFor let-child [ngForOf]="item.child">
+                <ion-item lines="none" class="item-child">
+                    <ion-checkbox color="secondary" [(ngModel)]="child.isChecked"></ion-checkbox>
+                    <ion-label class="ion-margin-start"><h5>{{child.title}}</h5></ion-label>
+                </ion-item>
+            </ng-template>
+        </div>
+    </ng-template>
+</ion-content>
+<ion-footer class="ion-no-margin ion-no-padding">
+    <ion-button class="custom-button" color="secondary" expand="block" (click)="onChoose()">Choose</ion-button>
+</ion-footer>

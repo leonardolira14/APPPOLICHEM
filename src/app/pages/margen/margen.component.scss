@@ -1,0 +1,9 @@
+ion-col{
+    text-align: center;
+    & h2{
+        text-transform: uppercase;
+        color: white;
+        padding: 3px;
+        margin: -1px;
+    }
+}

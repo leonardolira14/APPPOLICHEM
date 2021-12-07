@@ -1,0 +1,11 @@
+<ion-list lines="none">
+    <ion-item lines="none">
+        <ion-label><h4 class="text-size-xl">Action Sheet</h4></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>Notifications</ion-label>
+        <ion-select interface="action-sheet" [(ngModel)]="selected" (ionChange)="onSelect()">
+            <ion-select-option *ngFor="let item of list" [value]="item">{{item}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-list>

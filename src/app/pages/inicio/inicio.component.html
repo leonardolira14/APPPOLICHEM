@@ -1,0 +1,40 @@
+<app-head></app-head>
+
+<ion-content>
+  <ion-row class="row">
+    <ion-col size="12" routerLink='/margen/real'>
+      <ion-card class="bg">
+     
+        <ion-card-content>
+         <app-graphiccirc [serie]="[5,6,7,9]"  [title]="'Margen medio Real'" ></app-graphiccirc>
+         <h4 class="text-secondary">Margen mínimo: 3.25%</h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" routerLink='/margen/msrp'>
+      <ion-card>
+     
+        <ion-card-content>
+         <app-graphiccirc [serie]="[5,6,7]" [title]="'Margen medio MSRP'" ></app-graphiccirc>       
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="12 " routerLink='/volumenvsmargen'>
+      <ion-card>
+     
+        <ion-card-content>
+         <app-graphicscatter></app-graphicscatter>       
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="12" routerLink='/unidadedescliente'>
+      <ion-card>
+     
+        <ion-card-content>
+         <app-graphicline></app-graphicline>   
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<app-footer></app-footer>

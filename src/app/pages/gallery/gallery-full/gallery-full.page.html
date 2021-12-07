@@ -1,0 +1,13 @@
+<ion-content fullscreen>
+    <ion-header style="height: 0px">
+        <ion-toolbar class="transparent">
+            <ion-buttons slot="end">
+                <ion-button (click)="onClose()">
+                    <ion-icon slot="icon-only" name="close" color="danger"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <custom-slides-animation [list]="list1" [animation]="'fade'" [isFull]="true"></custom-slides-animation>
+</ion-content>

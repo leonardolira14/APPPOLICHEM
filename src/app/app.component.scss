@@ -1,0 +1,22 @@
+.profile {
+  background: linear-gradient(rgba(10, 10, 11, 0.63), rgba(64, 71, 74, 0.34)), url(../assets/images/home/profile.jpg) center no-repeat;
+  background-size: cover;
+  padding: 50px 0 15px 18px;
+  border-top: 0;
+}
+
+.name {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 5px;
+  line-height: 110%;
+}
+
+ion-avatar {
+  width: 80px;
+  height: 80px;
+}
+
+ion-content {
+  --background: var(--my-custom-sidemu-background) !important;
+}

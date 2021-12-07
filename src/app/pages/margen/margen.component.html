@@ -1,0 +1,30 @@
+<app-head [title]=title></app-head>
+<ion-content>
+ <app-barbuttons></app-barbuttons>
+
+ <ion-list class="m-t-70">
+    <ion-item *ngFor="let item of list"> 
+      <ion-avatar slot="start">
+        <img src="/assets/images/polychem/Imagen 1.svg">
+      </ion-avatar>
+      <ion-label>
+        <ion-row class="row">
+          <ion-col size="12">
+            <h2 class="text-blanco text-bold">{{item.title}}</h2>
+          </ion-col>
+          <ion-col size="6">
+            <h2 class="text-blanco text-bold">{{item.precio | currency}} MXN</h2>
+          </ion-col>
+          <ion-col size="6">
+            <h2 class="text-blanco text-bold">{{item.margen}}%</h2>
+          </ion-col>
+          <ion-col size="12">
+            <small class="text-blanco text-bold" *ngIf="item.cliente">{{item.cliente}}</small>
+          </ion-col>
+        </ion-row>       
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<app-footer></app-footer>

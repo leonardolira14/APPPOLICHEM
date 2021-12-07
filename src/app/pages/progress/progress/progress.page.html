@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Progress</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <ion-label class="text-color-medium text-size-l">Default</ion-label>
+        </ion-list-header>
+        <ion-progress-bar color="secondary"></ion-progress-bar>
+        <ion-progress-bar class="ion-margin-top" value="0.5" color="warning"></ion-progress-bar>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            <ion-label class="text-color-medium text-size-l">Colorize</ion-label>
+        </ion-list-header>
+        <ion-progress-bar color="danger" value="0.5"></ion-progress-bar>
+        <ion-progress-bar class="ion-margin-top" color="success" value="0.5"></ion-progress-bar>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            <ion-label class="text-color-medium text-size-l">Indeterminate</ion-label>
+        </ion-list-header>
+        <ion-progress-bar type="indeterminate" color="success"></ion-progress-bar>
+    </ion-list>
+    <ion-list>
+        <ion-list-header>
+            <ion-label class="text-color-medium text-size-l">INDETERMINATE (REVERSED)</ion-label>
+        </ion-list-header>
+        <ion-progress-bar color="warning" type="indeterminate" reversed="true"></ion-progress-bar>
+    </ion-list>
+
+    <ion-list>
+        <ion-list-header>
+            <ion-label class="text-color-medium text-size-l">Buffer</ion-label>
+        </ion-list-header>
+        <ion-progress-bar color="danger" value="0.25" buffer="0.5"></ion-progress-bar>
+    </ion-list>
+
+</ion-content>

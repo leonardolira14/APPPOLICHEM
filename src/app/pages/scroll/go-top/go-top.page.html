@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Go Top</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)">
+    <custom-animation-list [list]="list" [animationClassName]="animationClassName"></custom-animation-list>
+
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+        <ion-fab-button color="warning" (click)="goTop()">
+            <ion-icon name="md-arrow-up"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end" *ngIf="isEnd">
+        <ion-fab-button color="warning" [ngClass]="isEnd?'fade-in-right':'fade-out-right'" (click)="goTop()">
+            <ion-icon name="md-arrow-up"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

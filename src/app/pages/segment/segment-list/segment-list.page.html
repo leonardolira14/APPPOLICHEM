@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Segment List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-top">
+
+    <ion-segment [(ngModel)]="selected" scrollable color="warning">
+        <ion-segment-button *ngFor="let item of segmentList" [value]="item">
+            <ion-label>{{item}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+
+    <ng-container [ngSwitch]="selected">
+        <ng-template [ngSwitchCase]="'Order'">
+            <custom-list-comment-timeline [list]="orderList"></custom-list-comment-timeline>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Friend'">
+            <custom-list-sliding-product [list]="fList"></custom-list-sliding-product>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Profile'">
+            <custom-profile-slide></custom-profile-slide>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Product'">
+            <custom-product-list [list]="pList"></custom-product-list>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Card'">
+            <custom-google-card-bottom [list]="cardList"></custom-google-card-bottom>
+        </ng-template>
+    </ng-container>
+</ion-content>

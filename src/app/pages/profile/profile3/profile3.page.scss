@@ -1,0 +1,31 @@
+app-profile3 {
+  ion-toolbar {
+    color: var(--my-toolbar-color);
+    --border-width: 0px !important;
+
+    &.active {
+      background: var(--my-custom-backgroud) !important;
+      color: var(--my-toolbar-color) !important;
+
+      &.ios ion-back-button,
+      &.ios ion-menu-button {
+        color: var(--my-toolbar-color) !important;
+      }
+    }
+  }
+
+  .ios ion-back-button,
+  .ios ion-menu-button {
+    color: var(--my-custom-active);
+  }
+
+  .background-size {
+    height: 300px;
+    position: relative;
+  }
+
+  ion-segment {
+    margin-top: 10px !important;
+  }
+
+}

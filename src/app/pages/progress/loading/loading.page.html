@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Loading</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin">
+    <ion-button expand="block" color="medium" (click)="onDefault()">default</ion-button>
+    <ion-button expand="block" color="medium" (click)="onShowName('circles')">Circles</ion-button>
+    <ion-button expand="block" color="medium" (click)="onShowName('circular')">Circular</ion-button>
+    <ion-button expand="block" color="medium" (click)="onShowName('crescent')">Crescent</ion-button>
+    <ion-button expand="block" color="medium" (click)="onShowName('dots')">Dots</ion-button>
+    <ion-button expand="block" color="medium" (click)="onShowName('lines')">Lines</ion-button>
+    <ion-button expand="block" color="medium" (click)="onCustom()">Custom</ion-button>
+</ion-content>

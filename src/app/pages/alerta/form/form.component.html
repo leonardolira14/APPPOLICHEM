@@ -1,0 +1,75 @@
+<app-head [title]="'Crear Alerta'"></app-head>
+
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group color="secondary" value="biff">
+    
+      <ion-item color="dark">
+        <ion-label>Alerta Margen MSRP</ion-label>
+        <ion-radio color="light" slot="start" value="biff"></ion-radio>
+      </ion-item>
+  
+      <ion-item color="dark">
+        <ion-label>Alerta Margen MSRP</ion-label>
+        <ion-radio color="light" slot="start" value="griff"></ion-radio>
+      </ion-item>
+  
+      <ion-item color="dark">
+        <ion-label>Alerta Competencia</ion-label>
+        <ion-radio color="light" slot="start" value="buford"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item  color="light">
+      <ion-label>Tipo precio</ion-label>
+      <ion-select  color="light" placeholder="Select One">
+        <ion-select-option value="f">Maximo</ion-select-option>
+        <ion-select-option value="m">Medio</ion-select-option>
+        <ion-select-option value="m">Lifo</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item  color="light">
+      <ion-label>Tipo de producto</ion-label>
+      <ion-select  color="light" placeholder="Select One">
+        <ion-select-option value="f">Maximo</ion-select-option>
+        <ion-select-option value="m">Medio</ion-select-option>
+        <ion-select-option value="m">Lifo</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item  color="light">
+      <ion-label>Tipo de elaboración</ion-label>
+      <ion-select  color="light" placeholder="Select One">
+        <ion-select-option value="f">Maximo</ion-select-option>
+        <ion-select-option value="m">Medio</ion-select-option>
+        <ion-select-option value="m">Lifo</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-item color="light"> 
+    <ion-label >MarkUp inferior a:</ion-label>
+    <ion-input type="number" value="0"></ion-input>
+    <ion-label >%</ion-label>
+  </ion-item>
+  <div class="container mb-4">
+    <div class="row">
+      <div class="col-12 text-center" >
+        <div class="btn btn-orange mt-3 text-white text-regular w-100"> Guardar</div>
+        
+      </div>
+      <div class="col-6 " >
+        <div routerLink="/alerta/list" class="btn btn-dark-2 mt-3 text-white text-regular"> Ver Alertas</div>
+       
+      </div>
+      <div class="col-6 " >
+        <div  routerLink="/alerta/activas" class="btn btn-azulprimary mt-3 text-white text-regular"> Ver Activas</div>
+       
+      </div>
+     
+    </div>
+  </div>
+
+  
+</ion-content>
+
+
+<app-footer></app-footer>

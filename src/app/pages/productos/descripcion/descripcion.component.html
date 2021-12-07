@@ -1,0 +1,45 @@
+<app-head [title]="'Descripción'"></app-head>
+
+<ion-content>
+<ion-list class="m-t-70">
+ 
+  <ion-item color="light">
+    <ion-label>Tipo de producto</ion-label>
+    <ion-select color="light" placeholder="Selecciona un producto">
+      <ion-select-option value="f">Producto 1</ion-select-option>
+      <ion-select-option value="m">Producto 2</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item color="light">
+    <ion-label position="stacked">* Nombre del producto</ion-label>
+    <ion-input ></ion-input>
+  </ion-item>
+  <ion-item color="light">
+    <ion-label position="stacked">* Codigo de producto</ion-label>
+    <ion-input ></ion-input>
+  </ion-item>
+  <ion-item color="light">
+    <ion-label position="stacked">Descripción del Producto</ion-label>
+    <ion-textarea clearOnEdit="true"></ion-textarea>
+  </ion-item>
+  <ion-item color="dark">
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-6">
+          
+        </div>
+        <div class="col-6">
+          <div routerLink="/productos/contenido" class="btn btn-secondary d-flex">Siguiente</div>
+        </div>
+      </div>
+    </div>
+
+
+  </ion-item>
+
+</ion-list>
+
+
+</ion-content>
+<app-footer></app-footer>

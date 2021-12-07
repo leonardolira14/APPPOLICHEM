@@ -1,0 +1,19 @@
+<ion-tabs>
+    <ion-tab-bar slot="top">
+        <ion-tab-button tab="profile">
+            <ion-icon name="md-person"></ion-icon>
+            <ion-label>Profile</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="search">
+        </ion-tab-button>
+        <ion-tab-button tab="list">
+            <ion-icon name="pricetags"></ion-icon>
+            <ion-label>List</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>
+<ion-fab vertical="top" horizontal="center" slot="fixed">
+    <ion-fab-button color="warning" routerLink="/tabs-top/search">
+        <ion-icon name="barcode" size="large" color="secondary"></ion-icon>
+    </ion-fab-button>
+</ion-fab>

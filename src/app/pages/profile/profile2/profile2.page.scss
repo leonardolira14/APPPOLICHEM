@@ -1,0 +1,86 @@
+app-profile2 {
+  ion-toolbar {
+    color: var(--my-toolbar-color);
+    --border-width: 0px !important;
+
+    &.active {
+      background: var(--my-custom-backgroud) !important;
+      color: var(--my-toolbar-color) !important;
+
+      &.ios ion-back-button,
+      &.ios ion-menu-button {
+        color: var(--my-toolbar-color) !important;
+      }
+    }
+  }
+
+  .ios ion-back-button,
+  .ios ion-menu-button {
+    color: var(--my-custom-active);
+  }
+
+  .header-image {
+    position: relative;
+    z-index: 999;
+    transform-origin: center bottom;
+    background-size: cover;
+    transform: translate3d(0px, 0px, 0px) scale(1, 1);
+
+    > .background-size {
+      height: 200px;
+      position: relative;
+    }
+
+    ion-avatar {
+      height: 120px;
+      width: 120px;
+      opacity: 1 !important;
+      margin: -75px auto 0;
+      z-index: 999;
+      position: relative;
+    }
+  }
+
+  ion-segment-button {
+    border-color: transparent !important;
+  }
+
+  .segment-button-checked {
+    background: transparent !important;
+    border-bottom: 2px solid var(--my-custom-active) !important;
+  }
+
+  ion-item {
+    margin: 0px 0px 10px 0px;
+    --inner-padding-end: 8px !important;
+  }
+
+  ion-card {
+    height: 250px;
+    box-shadow: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: var(--custom-gradient-image);
+      z-index: -1;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    > .view {
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+      background: var(--my-custom-text-boder);
+      font-weight: bold;
+      line-height: 17px;
+      padding: 10px 16px;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+}

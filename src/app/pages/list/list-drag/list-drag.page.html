@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Drag and Drop List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <h3>Mobile Phone</h3>
+        </ion-list-header>
+        <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+            <ion-item *ngFor="let item of list" lines="none">
+                <ion-label slot="start">
+                    <h4>{{item.title}}</h4>
+                    <p>{{item.color}}</p>
+                    <p>{{item.price}}</p>
+                </ion-label>
+                <ion-reorder slot="end"></ion-reorder>
+            </ion-item>
+        </ion-reorder-group>
+    </ion-list>
+</ion-content>

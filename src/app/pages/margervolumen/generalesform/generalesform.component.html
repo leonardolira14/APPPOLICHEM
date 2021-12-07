@@ -1,0 +1,75 @@
+<app-head [title]="'Modificación de gastos'"></app-head>
+<ion-content>
+<div class="container text-regular">
+  <div class="row">
+    <div class="col-12 text-justify text-blanco text-regular mt-5">
+            Realizar cambios en estas tablas 
+      implican cambios en los precios 
+      estimados de todos los productos. 
+      Estos cambios no se efectúan 
+      en el Precio MSRP fijado.
+    </div>
+    <div class="col-12 mt-5">
+      <label  class="form-label text-blanco">Gastos Generales:</label>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Selecciona</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-12 mt-5">
+      <ion-card>
+        <ion-card-title>
+          Elaboración
+        </ion-card-title>
+        <ion-card-content>
+          <ion-list>
+            <ion-item  color="dark" >
+              <ion-label>Maquila</ion-label>
+              <ion-checkbox slot="end" ></ion-checkbox>
+            </ion-item>
+            <ion-item  color="dark" >
+              <ion-label>Distribución</ion-label>
+              <ion-checkbox slot="end" ></ion-checkbox>
+            </ion-item>
+            <ion-item color="dark"  >
+              <ion-label>Fabricación</ion-label>
+              <ion-checkbox slot="end" ></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="col-12 mt-5">
+      <ion-card>
+        <ion-card-title>
+          Canal
+        </ion-card-title>
+        <ion-card-content>
+          <ion-list color="dark">
+            <ion-item  color="dark" >
+              <ion-label>Horeca</ion-label>
+              <ion-checkbox  slot="end" ></ion-checkbox>
+            </ion-item>
+            <ion-item color="dark"  >
+              <ion-label>Retail</ion-label>
+              <ion-checkbox slot="end" ></ion-checkbox>
+            </ion-item>
+            <ion-item color="dark"  >
+              <ion-label>Exportación</ion-label>
+              <ion-checkbox slot="end" ></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</div>
+
+
+</ion-content>
+
+
+
+<app-footer></app-footer>

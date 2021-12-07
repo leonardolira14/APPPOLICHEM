@@ -1,0 +1,38 @@
+app-home-blog {
+  .blog {
+    padding: 50px 16px 16px 16px;
+
+    ion-col {
+      padding: 0px !important;
+      margin-bottom: 20px;
+      border: 1px solid var(--my-custom-boder);
+    }
+
+    h5 {
+      font-weight: 500;
+      margin: 10px 0 10px 10px;
+      line-height: 110%;
+      color: var(--my-custom-font-color2);
+    }
+
+    span {
+      margin-left: 30px;
+      font-size: 12px;
+      color: var(--my-custom-font-color);
+    }
+
+    p {
+      letter-spacing: 1px;
+      line-height: 20px;
+      font-size: 12px;
+      margin-left: 10px;
+      color: var(--my-custom-font-color);
+    }
+  }
+
+  .date {
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+}

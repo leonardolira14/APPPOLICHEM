@@ -1,0 +1,23 @@
+:host {
+  ion-avatar {
+    width: 120px !important;
+    height: 120px !important;
+    margin: 15px auto 20px;
+  }
+
+  ion-item {
+    --background: transparent !important;
+  }
+
+  .about-more {
+    height: 0px;
+    overflow: hidden;
+
+    &.active {
+      transition: all 600ms;
+      overflow: visible;
+      max-height: 999px;
+      height: 100%;
+    }
+  }
+}

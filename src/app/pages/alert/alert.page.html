@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Alert</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-button color="secondary" expand="block" (click)="onDefault()">Default Alert</ion-button>
+    <ion-button color="secondary" expand="block" (click)="onPromise()">Promise Alert</ion-button>
+    <ion-button color="secondary" expand="block" (click)="onConfirm()">Confirm Alert</ion-button>
+</ion-content>

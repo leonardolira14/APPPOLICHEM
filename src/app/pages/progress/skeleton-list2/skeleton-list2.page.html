@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>skeleton-list2</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-skeleton-list [rows]="7" *ngIf="!list"></custom-skeleton-list>
+
+    <ion-list *ngIf="list">
+        <ion-item *ngFor="let item of list" lines="none">
+            <ion-thumbnail slot="start">
+                <img [src]="item.img">
+            </ion-thumbnail>
+            <ion-label>
+                <h4 class="text-color-medium text-size-xl">{{item.title}}</h4>
+                <p>
+                    <ion-icon name="star" color="secondary"></ion-icon>
+                    <ion-icon name="star" color="secondary"></ion-icon>
+                    <ion-icon name="star" color="secondary"></ion-icon>
+                    <ion-icon name="star" color="secondary"></ion-icon>
+                    <ion-icon name="star" color="secondary"></ion-icon>
+                </p>
+                <p class="text-color-tertiary">{{item.color}}</p>
+            </ion-label>
+            <ion-label slot="end" position="fixed">
+                <p class="ion-text-right text-color-tertiary">New</p>
+                <p class="ion-text-right text-color-medium price">$99</p>
+                <p class="ion-text-right text-color-tertiary">10/km</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

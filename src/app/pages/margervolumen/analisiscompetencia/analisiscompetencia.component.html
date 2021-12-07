@@ -1,0 +1,91 @@
+<app-head [title]="'Análisis de la competencia'"></app-head>
+<ion-content>
+<h2 class="text-blanco text-center text-bold">Análisis de la competencia</h2>
+<ion-row>
+<ion-col size="4">
+  <ion-item >
+  <ion-avatar color="primary" slot="start">
+    <img src="/assets/images/polychem/Imagen 1.svg">
+  </ion-avatar>
+</ion-item>
+</ion-col>
+<ion-col size="8" class="text-blanco">
+  <span class="m-b-20 d-block">SAL ROSA DEL HIMALAYA 
+    MOLIDO  FINO BOLSA 1</span>
+    <ion-row>
+      <ion-col size="6" class="text-blanco">
+        <small class="d-block text-center">Precio MSRP</small>
+        <br>
+        <span class="text-bold d-block text-center" >1,911.12 MXN</span>
+      </ion-col>
+      <ion-col size="6" class="text-blanco">
+        <small class="d-block text-center">Márgen</small>
+        <br>
+        <span class="d-block text-center">1.05%</span>
+      </ion-col>
+    </ion-row>
+</ion-col>
+<ion-col size="12">
+  <span class="text-orange">Restaurentel. s.d,m -alsm -.s</span>
+</ion-col>
+
+<ion-col size="6">
+  <span class="text-blanco text-regular d-block text-center">Precio Polychem</span>
+  <span class="text-blanco text-regular d-block text-center">11.05 MXN</span>
+</ion-col>
+
+<ion-col size="6">
+  <span class="text-blanco text-regular d-block text-center">Márgen</span>
+  <span class="text-blanco text-regular d-block text-center">1.05 %</span>
+</ion-col>
+</ion-row>
+<ion-list>
+  <ion-list>
+    <ion-item *ngFor="let item of list"> 
+      
+      <ion-row>
+        <ion-col size="4">
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="/assets/images/polychem/Imagen 1.svg">
+            </ion-avatar>
+          </ion-item>
+        </ion-col>
+        <ion-col size="8">
+          <ion-row>
+            <ion-col size="12">
+              <span class="d-block text-blanco text-center text-bold">{{item.title}}</span>
+              <small class=" d-block text-blanco text-bold">{{item.subtitle}}</small>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="4">
+          <small class="d-block text-blanco text-bold text-center">Precio</small>
+          <small class="d-block text-blanco text-bold text-center">{{item.precio | currency}} MXN</small>
+        </ion-col>
+        <ion-col size="4">
+          <small class="d-block text-blanco text-bold text-center">Diferencia</small>
+          <small class="d-block text-blanco text-bold text-center">{{item.Diferencia1 }} %</small>
+          <small class="d-block text-blanco text-bold text-center">(más caro)</small>
+        </ion-col>
+        <ion-col size="4">
+          <small class="d-block text-blanco text-bold text-center">Diferencia</small>
+          <small class="d-block text-blanco text-bold text-center">{{item.Diferencia2 }} %</small>
+          <small class="d-block text-blanco text-bold text-center">(más caro)</small>
+        </ion-col>
+        <ion-col size="12" class="d-block text-blanco text-bold">
+          <span>Tapa: {{item.Tapa}}</span>
+        </ion-col>
+        <ion-col size="12" class="d-block text-blanco text-bold">
+          <span>Etiquetas: {{item.Etiquetas}}</span>
+        </ion-col>
+        <ion-col size="12" class="d-block text-blanco text-bold">
+          <span>Embase: {{item.Embase}}</span>
+        </ion-col>
+      </ion-row>  
+      
+    </ion-item>
+  </ion-list>
+</ion-list>
+</ion-content>
+<app-footer></app-footer>

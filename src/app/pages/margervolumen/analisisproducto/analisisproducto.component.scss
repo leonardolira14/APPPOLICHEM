@@ -1,0 +1,10 @@
+ion-card{
+    background: #000;
+  }
+ ion-card-subtitle{
+     color: #fff;
+ }
+
+ ion-button{
+    --background:map-get($colors, secondary )
+ }

@@ -1,0 +1,21 @@
+<app-head [title]="'Alertas'"></app-head>
+<ion-content>
+<app-barbuttons></app-barbuttons>
+  <div class="container-fluid mt-5">
+      <div class="row mt-4">
+          <div class="col-12 mt-5" *ngFor="let item of listAlertas">
+              <app-cardalert
+              [title]="item.title"
+              [precio]="item.precio"
+              [tipoAlerta] ='item.tipoAlerta'
+              [tipoprecio] = 'item.tipoprecio'
+              [restaurante]  ='item?.restaurante'
+              [fecha]='item.fecha'
+              [marca] ='item?.marca'
+              [margen]="item.margen"
+              ></app-cardalert>
+          </div>
+      </div>
+  </div>
+</ion-content>
+<app-footer></app-footer>

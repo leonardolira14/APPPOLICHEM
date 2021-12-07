@@ -1,0 +1,27 @@
+:host {
+  ion-content {
+    --background: url('../../../../assets/images/splash/1.jpg');
+  }
+
+  .logo {
+    width: 120px;
+    margin-top: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .slide {
+    animation-name: slide-in-blurred-tl, pulsate-fwd;
+    animation-duration: 1s, 0.5s;
+    animation-delay: 0s, 1s;
+    animation-iteration-count: 1, 1;
+
+    -webkit-animation-name: slide-in-blurred-tl, pulsate-fwd;
+    -webkit-animation-duration: 1s, 0.5s;
+    -webkit-animation-delay: 0s, 1s;
+    -webkit-animation-iteration-count: 1, 1;
+  }
+
+}

@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Gallery</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-gallery-layout [list]="list" (onSelect)="onSelect($event)"></custom-gallery-layout>
+</ion-content>

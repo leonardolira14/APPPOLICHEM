@@ -1,0 +1,14 @@
+<app-head [title]="'Precio vs Volumen'"></app-head>
+<ion-content>
+  <app-barbuttons></app-barbuttons>
+  <ion-toolbar class="m-t-60 m-b-30">
+    <ion-searchbar color="tertiary"></ion-searchbar>
+  </ion-toolbar>
+  <ion-card routerLink='/volumenvsmargen/analisiscompetencia'>
+     
+    <ion-card-content>
+     <app-graphicscatter></app-graphicscatter>       
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<app-footer></app-footer>

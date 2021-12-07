@@ -1,0 +1,28 @@
+:host {
+  ion-tabs {
+    background: var(--my-custom-backgroud) !important;
+  }
+
+  ::ng-deep ion-content {
+    --background: var(--my-custom-backgroud) !important;
+  }
+
+  ion-tab-bar {
+    --background: var(--ion-color-secondary);
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+  }
+
+  ion-tab-button {
+    --background: var(--ion-color-secondary);
+    color: var(--ion-color-primary);
+  }
+
+  .tab-selected {
+    color: var(--ion-color-primary-contrast);
+  }
+  .fab-bottom {
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}

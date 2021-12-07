@@ -1,0 +1,64 @@
+app-home-portfolio {
+  .portfolio {
+    background: var(--my-custom-backgroud);
+    padding: 50px 16px 0px 20px;
+    color: var(--my-custom-font-color2);
+
+    h4 {
+      font-weight: 400;
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 110%;
+    }
+
+    p {
+      margin: 5px 0;
+      letter-spacing: 1px;
+      line-height: 20px;
+      font-size: 12px;
+      color: var(--my-custom-font-color);
+    }
+
+    &-head {
+      text-align: center;
+      margin: 0 auto 17px auto;
+
+      &-line {
+        width: 47px;
+        height: 2.5px;
+        background: var(--ion-color-danger);
+        margin: 10px auto 0;
+      }
+    }
+  }
+
+  .tabs {
+    display: block;
+    width: 100%;
+
+    .active {
+      color: var(--my-custom-active);
+    }
+
+    ul {
+      padding: 0;
+      text-align: center;
+      list-style: none;
+      margin: 0 auto 15px;
+      display: block;
+
+      li {
+        display: inline-block;
+        cursor: pointer;
+        color: #999;
+        padding: 5px 6px;
+        margin: 4px 4px;
+        list-style-type: none;
+      }
+    }
+  }
+
+
+}
+
+

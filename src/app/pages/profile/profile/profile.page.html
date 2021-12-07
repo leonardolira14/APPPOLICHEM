@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar class="transparent" [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)" class="content-position">
+    <div class="background-size" [ngStyle]="{'background-image':'url('+head.img+')'}">
+        <div class="title-section">
+            <h3 class="text-size-xl text-color-primary ion-text-wrap">{{head.title}}</h3>
+            <h4 class="text-size-l text-color-primary ion-text-wrap">{{head.subTitle}}</h4>
+        </div>
+    </div>
+    <ion-grid class="ion-no-margin ion-no-padding">
+        <ion-row>
+            <ion-col size="12" size-md="6" class="ion-no-padding ion-no-margin">
+                <ion-list lines="none" class="ion-no-margin">
+                    <ion-item lines="none" class="ion-no-padding" *ngFor="let item of list">
+                        <ion-label>
+                            <ion-item-divider>
+                                <ion-avatar>
+                                    <img [src]="item.img">
+                                </ion-avatar>
+                                <h3 class="text-size-xl text-color-medium ion-text-wrap ion-padding-start">{{item.title}}</h3>
+                                <ion-button slot="end" color="secondary" (click)="onRead(item)">Read</ion-button>
+                            </ion-item-divider>
+                            <ion-item-divider>
+                                <p class="text-size-s text-color-secondary ion-text-wrap">{{item.content}}</p>
+                            </ion-item-divider>
+                        </ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

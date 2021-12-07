@@ -1,0 +1,11 @@
+@import "~src/style/mixin";
+
+:host {
+  ion-item {
+    border-radius: 0px !important;
+  }
+
+  img {
+    @include width(100%, 100%)
+  }
+}

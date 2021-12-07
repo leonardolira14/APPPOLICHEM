@@ -1,0 +1,11 @@
+<ion-list lines="none">
+    <ion-item lines="none">
+        <ion-label><h4 class="text-size-xl">Basic</h4></ion-label>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label>City</ion-label>
+        <ion-select color="secondary" placeholder="Select City" [(ngModel)]="selectedCity" (ionChange)="selectCity()">
+            <ion-select-option *ngFor="let item of cityList" [value]="item">{{item}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+</ion-list>

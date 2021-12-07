@@ -1,0 +1,33 @@
+
+@import '../../../global.scss';
+.card-title{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    padding: 10px 5px;
+    text-transform: uppercase;
+   
+    &.mrsp{
+        background-color: #9587E3;
+        color: #fff;
+    }
+    &.amr{
+        background-color: #D7258F;
+        color: #fff;
+    }
+    &.ac{
+        background-color: #EEFBAA;
+        color: #000;
+    }
+    &.an{
+        background-color: #fff;
+        color: #000;
+    }
+}
+.avatar{
+    border-radius: 50%;
+    object-fit: cover;
+}
+.fa{
+  font-size: 20px;
+}

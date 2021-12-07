@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Segment Card</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-top">
+
+    <ion-segment [(ngModel)]="selected" scrollable color="warning">
+        <ion-segment-button *ngFor="let item of segmentList" [value]="item">
+            <ion-label>{{item}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+
+    <ng-container [ngSwitch]="selected">
+        <ng-template [ngSwitchCase]="'Profile'">
+            <custom-profile-slide2 [user]="user" [list]="list"></custom-profile-slide2>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Blog'">
+            <custom-card-blog [list]="bList"></custom-card-blog>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Product'">
+            <custom-card-blog [list]="bList1" [isHead]="true"></custom-card-blog>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'Clothes'">
+            <custom-card-blog [list]="bList2" [isHead]="true" [middle]="false"></custom-card-blog>
+        </ng-template>
+    </ng-container>
+</ion-content>

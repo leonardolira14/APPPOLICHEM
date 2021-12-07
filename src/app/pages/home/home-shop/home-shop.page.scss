@@ -1,0 +1,32 @@
+
+app-home-shop {
+  .shop {
+    background: var(--my-custom-backgroud);
+    padding: 50px 16px 0px 20px;
+    color: var(--my-custom-font-color2);
+  }
+
+  .price {
+    color: var(--my-custom-price);
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  h6 {
+    line-height: 110%;
+    margin: 8px 0;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 400 !important;
+    color: var(--my-custom-font-color2);
+  }
+
+  ion-card {
+    margin: 0px !important;
+    border: 1px solid #333;
+    padding: 10px 8px 10px 8px;
+  }
+}
+
+

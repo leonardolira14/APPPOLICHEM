@@ -1,0 +1,54 @@
+<ion-content fullscreen>
+    <video height="100%" autoplay loop muted playsinline="true">
+        <source src="assets/images/login.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <ion-header>
+        <ion-toolbar class="transparent">
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-grid>
+        <ion-row class="header">
+            <ion-col size="12" size-md="8">
+                <form [formGroup]="lForm">
+                    <ion-card>
+                        <ion-item lines="none">
+                            <ion-icon name="md-person" color="light"></ion-icon>
+                            <ion-input formControlName="email" type="text"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.email.valid  && lForm.controls.email.dirty">
+                            please enter a valid email
+                        </ion-text>
+                        <ion-item lines="none">
+                            <ion-icon name="lock" color="light"></ion-icon>
+                            <ion-input formControlName="pwd" type="password"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.pwd.valid  && lForm.controls.pwd.dirty">
+                            password Length at 6-15
+                        </ion-text>
+                    </ion-card>
+                </form>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" size-md="8">
+                <ion-button expand="block" color="secondary" [disabled]="!lForm.valid" (click)="onLogin()">Sign In
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" size-md="8" class="ion-text-center">
+                <ion-button fill="clear" *ngFor="let item of logoList;let i=index" [className]="animationClass"
+                            [ngStyle]="{'animation-delay':(i + 1) * 0.2+'s'}">
+                    <ion-icon slot="icon-only" [name]="item" color="warning" size="large"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

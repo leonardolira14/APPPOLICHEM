@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        
+        <ion-title>Bienvenido</ion-title>
+      
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-md="8" class="ion-text-center">
+                <img class="logo slide-top" src="assets/images/polychem/logopolychem.svg"/>
+            </ion-col>
+            <ion-col size="12" size-md="8">
+                <form [formGroup]="lForm">
+                    <ion-card>
+                        <ion-item lines="none" class="slide1">
+                            <ion-icon name="md-person" color="light"></ion-icon>
+                            <ion-input formControlName="email" placeholder="Email" type="text"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.email.valid  && lForm.controls.email.dirty">
+                            Ingresa una direccion de email valida
+                        </ion-text>
+                        <ion-item lines="none" class="slide2">
+                            <ion-icon name="lock" color="light"></ion-icon>
+                            <ion-input formControlName="pwd" placeholder="Contraseña" type="password"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.pwd.valid  && lForm.controls.pwd.dirty">
+                          Ingresa tu contraseña
+                        </ion-text>
+                    </ion-card>
+                </form>
+            </ion-col>
+            
+        </ion-row>
+        <ion-row class="slide3">
+            <ion-col size="12" size-md="8">
+                <ion-button expand="block" color="secondary" [disabled]="!lForm.valid" (click)="onLogin()">Entrar
+                </ion-button>
+            </ion-col>
+            <ion-col size="12" size-md="8" class="ion-text-center">
+                <img class="logo slide-top" src="assets/images/polychem/logoblanco.png"/>
+            </ion-col>
+        </ion-row>
+       
+       
+    </ion-grid>
+</ion-content>

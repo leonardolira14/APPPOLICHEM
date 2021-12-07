@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Go Bottom</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)">
+
+    <custom-card-list-product [list]="list"></custom-card-list-product>
+
+    <ion-fab slot="fixed" vertical="top" horizontal="start">
+        <ion-fab-button color="warning" (click)="goTop()">
+            <ion-icon name="md-arrow-down"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-fab slot="fixed" vertical="top" horizontal="end" *ngIf="isEnd">
+        <ion-fab-button color="warning" [ngClass]="isEnd?'fade-in-right':'fade-out-right'" (click)="goTop()">
+            <ion-icon name="md-arrow-down"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

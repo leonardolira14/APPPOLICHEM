@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Sign Up</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-md="8" class="ion-text-center">
+                <img class="logo slide-top" src="assets/images/logo.png"/>
+            </ion-col>
+            <ion-col size="12" size-md="8">
+                <form [formGroup]="rForm">
+                    <ion-card class="ion-no-margin">
+                        <ion-item lines="none" class="slide-bottom1">
+                            <ion-icon name="mail" color="light"></ion-icon>
+                            <ion-input formControlName="email" type="text" placeholder="email"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!rForm.controls.email.valid  && rForm.controls.email.dirty">
+                            please enter a valid email.
+                        </ion-text>
+                        <ion-item lines="none" class="slide-bottom2">
+                            <ion-icon name="md-person" color="light"></ion-icon>
+                            <ion-input formControlName="name" type="text" placeholder="username"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!rForm.controls.name.valid  && rForm.controls.name.dirty">
+                            userName Length at 3-15
+                        </ion-text>
+                        <ion-item lines="none" class="slide-bottom3">
+                            <ion-icon name="lock" color="light"></ion-icon>
+                            <ion-input formControlName="pwd" type="password"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!rForm.controls.pwd.valid  && rForm.controls.pwd.dirty">
+                            password Length at 6-15
+                        </ion-text>
+                    </ion-card>
+                </form>
+            </ion-col>
+        </ion-row>
+        <ion-row class="slide-bottom4">
+            <ion-col size="12" size-md="8">
+                <ion-button expand="block" color="secondary" [disabled]="!rForm.valid" (click)="onSignUp()">Sign Up
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,11 @@
+<ion-row>
+    <ion-col size="12" class="slider">
+        <ion-card *ngFor="let item of list">
+            <div class="background-size" [ngStyle]="{'background-image':'url('+item.bgImg+')'}"></div>
+            <ion-card-content>
+                <h4 class="text-size-m text-color-medium">{{item?.title}}</h4>
+                <p class="text-size-m text-color-tertiary">{{item?.subTitle}}</p>
+            </ion-card-content>
+        </ion-card>
+    </ion-col>
+</ion-row>

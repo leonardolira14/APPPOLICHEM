@@ -1,0 +1,13 @@
+<ion-slides pager="true">
+    <ion-slide *ngFor="let item of list">
+        <div class="cover-item" [ngStyle]="{'background-image': 'url('+item.img+')'}">
+            <div class="cover-content cover-content-center">
+                <h1>{{item.title}}</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est.</p>
+                <ion-button color="secondary">Get started</ion-button>
+            </div>
+            <div class="cover-overlay overlay"></div>
+        </div>
+    </ion-slide>
+</ion-slides>

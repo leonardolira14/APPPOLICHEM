@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="background-size" [ngStyle]="{'background-image':'url('+user.bgImg+')'}"></div>
+    <ion-item lines="none" class="ion-text-center ion-no-padding transparent" style="margin-top: -70px">
+        <ion-avatar>
+            <img [src]="user.avatar">
+        </ion-avatar>
+    </ion-item>
+    <ion-item lines="none" class="ion-text-center transparent">
+        <ion-label>
+            <h3 class="text-size-xl text-color-light">{{user.name}}</h3>
+            <p class="text-size-s text-color-secondary ion-text-wrap">{{user.content}}</p>
+        </ion-label>
+    </ion-item>
+    <ion-row class="ion-text-center">
+        <ion-col size="6">
+            <ion-button class="default-button" color="warning" expand="block">Follow</ion-button>
+        </ion-col>
+        <ion-col size="6">
+            <ion-button class="default-button" color="warning" expand="block">Follows</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

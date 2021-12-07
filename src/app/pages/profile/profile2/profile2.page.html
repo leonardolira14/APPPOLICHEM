@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar class="transparent" [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile 2</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)" class="content-position">
+    <div class="header-image">
+        <div class="ion-padding background-size" [ngStyle]="{'background-image':'url('+bgImg+')'}">
+        </div>
+        <div class="ion-padding ion-text-center">
+            <ion-avatar>
+                <img [src]="user.img">
+            </ion-avatar>
+            <h3 class="text-size-xl text-color-medium">{{user.name}}</h3>
+            <p class="text-size-s text-color-secondary ion-text-wrap">{{user.intro}}</p>
+            <div class="ion-padding-top">
+                <ion-segment [(ngModel)]="selected" color="secondary" (ionChange)="segmentChanged($event)">
+                    <ion-segment-button value="events">
+                        <ion-label>
+                            <span>168</span>
+                            <div class="clear"></div>
+                            <span>Events</span>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button value="followers">
+                        <ion-label>
+                            <span>3000</span>
+                            <div class="clear"></div>
+                            <span>Followers</span>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button value="following">
+                        <ion-label>
+                            <span>7000</span>
+                            <div class="clear"></div>
+                            <span>Following</span>
+                        </ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+        </div>
+    </div>
+
+    <ion-grid>
+        <ion-row>
+            <ng-container [ngSwitch]="selected" *ngIf="list">
+                <ng-template [ngSwitchCase]="'events'">
+                    <ion-col size="12" *ngFor="let item of list">
+                        <ion-card class="ion-text-center ion-no-margin ion-no-padding background-size"
+                                  [ngStyle]="{'background-image':'url('+item.img+')'}">
+                            <span class="view text-color-medium" (click)="onSelectCard(item)">View More</span>
+                            <ion-card-content>
+                                <h3 class="text-size-xl text-color-medium">{{item.title}}</h3>
+                                <p class="text-size-s text-color-medium">{{item?.content}}</p>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ng-template>
+                <ng-template [ngSwitchCase]="['followers','following'].includes(selected) ? selected : ''">
+                    <ion-col size="12">
+                        <ion-item lines="none" *ngFor="let item of list">
+                            <ion-avatar>
+                                <img [src]="item.img">
+                            </ion-avatar>
+                            <ion-label><h3 class="text-size-l text-color-medium ion-padding-start">{{item.title}}</h3>
+                            </ion-label>
+                            <ion-button
+                                    color="secondary">{{selected === 'followers' ? 'Follow' : 'UnFollow'}}</ion-button>
+                        </ion-item>
+                    </ion-col>
+                </ng-template>
+            </ng-container>
+        </ion-row>
+    </ion-grid>
+</ion-content>

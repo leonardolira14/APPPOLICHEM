@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile Avatar</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content  [scrollEvents]="true"
+              (ionScroll)="onScroll($event)">
+    <custom-profile-avatar></custom-profile-avatar>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end" *ngIf="isEnd">
+        <ion-fab-button color="warning" [ngClass]="isEnd?'fade-in-right':'fade-out-right'" (click)="goTop()">
+            <ion-icon name="md-arrow-up"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Custom Spinner</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let item of list">
+            <ion-icon [src]="'assets/images/spinner/'+item+'.svg'" size="large"></ion-icon>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

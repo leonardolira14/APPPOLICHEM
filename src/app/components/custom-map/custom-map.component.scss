@@ -1,0 +1,15 @@
+ion-grid {
+  height: calc(100% - 350px) !important;
+
+  ion-row {
+    height: 100%;
+
+    ion-col {
+      height: 100%;
+    }
+  }
+}
+
+agm-map {
+  height: 100%;
+}

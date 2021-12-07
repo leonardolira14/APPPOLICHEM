@@ -1,0 +1,17 @@
+app-login-video {
+  video {
+    position: fixed;
+  }
+
+  .header {
+    margin-top: 90px;
+  }
+
+  ion-toolbar:last-child {
+    --border-width: 0px !important;
+  }
+
+  ion-item {
+    --background: #f7f3f336 !important;
+  }
+}

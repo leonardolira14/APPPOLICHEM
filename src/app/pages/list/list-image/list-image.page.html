@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>List Image</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ng-template ngFor let-item [ngForOf]="list">
+        <ion-item lines="none" (click)="toggle(item)" tappable>
+            <ion-avatar>
+                <img [src]="item.img">
+            </ion-avatar>
+            <ion-label class="ion-margin-start">
+                <h4>{{item.title}}</h4>
+                <p class="ion-text-wrap">{{item.content}}</p>
+            </ion-label>
+        </ion-item>
+        <div class="box" [class.active]="!item.hidden">
+            <ng-template ngFor let-child [ngForOf]="item.child">
+                <ion-item class="child" lines="none" (click)="onSelect(child)" tappable>
+                    <ion-avatar slot="end">
+                        <img [src]="child.img">
+                    </ion-avatar>
+                    <ion-label>
+                        <h4>{{child.title}}</h4>
+                        <p>{{child.content}}</p>
+                        <p>{{child.price}}</p>
+                    </ion-label>
+                </ion-item>
+            </ng-template>
+        </div>
+    </ng-template>
+</ion-content>

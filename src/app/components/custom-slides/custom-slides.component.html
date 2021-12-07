@@ -1,0 +1,9 @@
+<ion-slides pager="true">
+    <ion-slide *ngFor="let item of bannerList">
+        <div class="banner background-size" [ngStyle]="{'background-image': 'url('+item.img+')'}">
+            <div class="banner-content">
+                <h2>{{item.title}}</h2>
+            </div>
+        </div>
+    </ion-slide>
+</ion-slides>

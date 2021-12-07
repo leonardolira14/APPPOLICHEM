@@ -1,0 +1,31 @@
+:host {
+  .searchTool {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+
+    &.active {
+      height: 72px;
+      opacity: 1;
+    }
+  }
+
+  ion-searchbar {
+    background: var(--my-custom-font-color3) !important;
+    --placeholder-color: var(--my-custom-item-background) !important;
+    --placeholder-opacity: 1 !important;
+    border-radius: 24px !important;
+    margin: 16px 16px !important;
+    width: calc(100% - 32px) !important;
+    height: 40px !important;
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.16) !important;
+  }
+
+  ion-item {
+    --inner-padding-end: 8px !important;
+  }
+
+
+}

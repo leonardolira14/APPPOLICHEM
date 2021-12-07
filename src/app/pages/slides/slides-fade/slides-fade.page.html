@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Slides Fade</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row style="margin-top: 50px">
+        <ion-col size="12">
+            <custom-slides-animation [list]="list" [animation]="'fade'"></custom-slides-animation>
+        </ion-col>
+    </ion-row>
+</ion-content>

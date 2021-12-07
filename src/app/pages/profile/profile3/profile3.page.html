@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-toolbar class="transparent" [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile 3</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)" class="content-position">
+    <div class="background-size" [ngStyle]="{'background-image':'url('+img+')'}"></div>
+
+    <ion-segment [(ngModel)]="selected" color="secondary" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="events">
+            <ion-label>
+                <span>168</span>
+                <div class="clear"></div>
+                <span>Events</span>
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="gallery">
+            <ion-label>
+                <span>3000</span>
+                <div class="clear"></div>
+                <span>Gallery</span>
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="location">
+            <ion-label>
+                <span>7000</span>
+                <div class="clear"></div>
+                <span>Location</span>
+            </ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ng-container [ngSwitch]="selected" *ngIf="list">
+        <ng-template [ngSwitchCase]="'events'">
+            <custom-card-layout4 [list]="list"></custom-card-layout4>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'gallery'">
+            <custom-card-gallery-layout [list]="galleryList"></custom-card-gallery-layout>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'location'">
+            <custom-map></custom-map>
+        </ng-template>
+    </ng-container>
+</ion-content>

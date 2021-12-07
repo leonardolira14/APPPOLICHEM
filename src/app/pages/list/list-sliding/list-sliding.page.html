@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>List Sliding</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            <h3>Reply or Del Message!</h3>
+        </ion-list-header>
+
+        <ion-item-sliding *ngFor="let item of list" #slidingItem>
+            <ion-item lines="none">
+                <ion-label>
+                    <h5>{{item.name}}</h5>
+                    <p>{{item.msg}}</p>
+                    <p>{{item.time}}</p>
+                </ion-label>
+                <div class="s-box">
+                    <ion-icon name="arrow-dropleft" color="light"></ion-icon>
+                </div>
+            </ion-item>
+            <ion-item-options side="end">
+                <ion-item-option (click)="onDel(item,slidingItem)">
+                    <ion-button>
+                        <ion-label>
+                            <ion-icon name="ios-trash" color="danger"></ion-icon>
+                            <h6>Delete</h6>
+                        </ion-label>
+                    </ion-button>
+                </ion-item-option>
+                <ion-item-option (click)="onReply(item,slidingItem)">
+                    <ion-button>
+                        <ion-label>
+                            <ion-icon name="ios-undo"></ion-icon>
+                            <h6>Reply</h6>
+                        </ion-label>
+                    </ion-button>
+                </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

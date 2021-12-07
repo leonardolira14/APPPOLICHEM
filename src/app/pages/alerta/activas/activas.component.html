@@ -1,0 +1,23 @@
+<app-head [title]="'Alertas activas'"></app-head>
+<ion-content>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3" *ngFor="let item of listAlert">
+      <app-cardalertactive
+      [editor]='item.editor'
+      [fabricacion]='item.fabricacion'
+      [fecha]='item.fecha'
+      [tipoAlerta]='item.tipoAlerta'
+      [tipo]='item.tipo'
+      [precio]='item.precio'
+      ></app-cardalertactive>
+    </div>
+
+
+  </div>
+</div>
+
+</ion-content>
+
+<app-footer></app-footer>

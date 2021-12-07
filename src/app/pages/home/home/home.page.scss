@@ -1,0 +1,88 @@
+app-home {
+  .content {
+    padding: 50px 0px;
+    font-size: 12px;
+    background: var(--ion-color-primary);
+    color: var(--my-custom-font-color2);
+
+    h5 {
+      margin: 0px;
+      font-size: 16px;
+    }
+
+    p {
+      margin-top: 8px !important;
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+  }
+
+  .screen {
+    background: var(--my-custom-backgroud);
+    padding: 50px 16px 0px 20px;
+    color: var(--my-custom-font-color2);
+
+    h4 {
+      font-weight: 400;
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 110%;
+    }
+
+    h5 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--my-custom-font-color2);
+    }
+
+    p {
+      margin: 5px 0;
+      letter-spacing: 1px;
+      line-height: 20px;
+      font-size: 12px;
+      color: var(--my-custom-font-color);
+    }
+
+    &-head {
+      text-align: center;
+      margin: 0 auto 17px auto;
+
+      &-line {
+        width: 47px;
+        height: 2.5px;
+        background: var(--ion-color-danger);
+        margin: 10px auto 0;
+      }
+    }
+  }
+
+  ion-card {
+    --background: var(--my-card-background) !important;
+
+    ion-card-content {
+      padding: 8px !important;
+    }
+  }
+
+  .model {
+    padding: 50px 16px 0px 16px;
+    background: var(--ion-color-primary);
+    color: var(--my-custom-font-color2);
+
+    h4 {
+      margin: 0px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+      margin-top: 8px !important;
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
+  }
+
+}
+
+

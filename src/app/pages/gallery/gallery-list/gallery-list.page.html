@@ -1,0 +1,12 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/gallery"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Gallery List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-gallery-layout2 [list]="list" (onSelect)="onOpen($event.title)"></custom-gallery-layout2>
+</ion-content>

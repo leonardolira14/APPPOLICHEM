@@ -1,0 +1,13 @@
+<ion-slides pager="true" [options]="slideOpts" [class.full]="isFull">
+    <ion-slide *ngFor="let img of list">
+        <ng-template [ngIf]="isAvatar" [ngIfElse]="noAvatar">
+            <ion-avatar>
+                <img [src]="img">
+            </ion-avatar>
+        </ng-template>
+        <ng-template #noAvatar>
+            <img [src]="img">
+        </ng-template>
+
+    </ion-slide>
+</ion-slides>

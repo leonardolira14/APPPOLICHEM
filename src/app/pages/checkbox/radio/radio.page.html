@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Radio Group</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <custom-radio-layout [list]="list" (onCheck)="onCheck($event)"></custom-radio-layout>
+</ion-content>
